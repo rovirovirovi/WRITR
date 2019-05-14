@@ -42,7 +42,6 @@ a:active{
 .header{
     display: flex;
     justify-content: space-between;
-    position: relative;
 }
 
 .nav {
@@ -71,9 +70,11 @@ a:active{
 }
 
 .join{
+    /* background-color: green; */
+    margin: auto;
+    /* background-color: green; */
     max-width: 375px;
     padding: 10px 0px;
-    margin: auto;
     border: 1px solid white;
 }
 
@@ -84,6 +85,10 @@ a:hover .join {
 
 .gray-container{
     padding-bottom: 80px;;
+}
+
+.gray-container h1{
+    font-size: 1.2em;
 }
 
 .blue-container{
