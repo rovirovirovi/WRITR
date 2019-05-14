@@ -99,8 +99,9 @@ a:hover .join {
     -webkit-transform: skewY(-20deg);
     transform: skewY(-20deg);
     display: flex;
-    width: 100%;
+    justify-content: center;
 }
+
 
 .yellow-container{
     padding-bottom: 50px;
@@ -130,9 +131,54 @@ a:hover .join {
     justify-content: center;
 }
 
+@media only screen and (min-width: 1000px){
+    .blue-container{
+        /* width: 110%; */
+        padding-bottom: 50px;
+        background-color: #6dcff6;
+        color: #232323;
+        -webkit-transform: skewY(-10deg);
+        transform: skewY(-10deg);
+        display: flex;
+        justify-content: center;
+    }
+
+    .yellow-container{
+        padding-bottom: 50px;
+        background-color: #fff568;
+        color: #232323;
+        -webkit-transform: skewY(-10deg);
+        transform: skewY(-10deg);
+        display: flex;
+        justify-content: center;
+    }
+    
+    .red-container{
+        padding-bottom: 50px;
+        background-color: #f26d7d;
+        color: #232323;
+        -webkit-transform: skewY(-10deg);
+        transform: skewY(-10deg);
+        display: flex;
+        justify-content: center;
+    }
+
+    .un-skew{
+        -webkit-transform: skewY(10deg);
+        transform: skewY(10deg);
+    }
+
+    .books{
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 1000px;
+        justify-content: center;
+    }
+}
+
 .book{
-    background-color: #232323;
     display: flex;
+    background-color: #232323;
     justify-content: center;
     margin: 5px;
     height: 300px;
