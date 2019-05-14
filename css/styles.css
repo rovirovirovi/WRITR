@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+
+body{
+    background-color: #232323;
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    margin: 0;
+}
+
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+a:link{
+    text-decoration: none;
+}
+a:visited{
+    color: white;
+    text-decoration: none;
+}
+a:hover{
+    color:white;
+    text-decoration: none;
+}
+a:active{
+    color:white;
+    text-decoration: none;
+}
+
+.container{
+    text-align: center;
+    padding: 2em 1.2em;
+}
+
+.logo{
+    width: 150px;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+}
+
+.nav li{
+    margin: 5px 0px;
+    padding: 5px;
+}
+
+.nav li a{
+    margin: 10px 20px;
+    padding: 5px;
+    /* background-color: green; */
+}
+
+.nav li a:hover {
+    outline: 1px solid white;
+}
+
+.nav li a:active{
+    background-color: white;
+    color: #232323;
+}
+
+.join{
+    max-width: 375px;
+    padding: 10px 0px;
+    margin: auto;
+    border: 1px solid white;
+}
+
+a:hover .join {
+    background-color: white;
+    color: #232323;
+}
+
+.gray-container{
+    padding-bottom: 80px;;
+}
+
+.blue-container{
+    /* width: 110%; */
+    padding-bottom: 50px;
+    background-color: #6dcff6;
+    color: #232323;
+    -webkit-transform: skewY(-20deg);
+    transform: skewY(-20deg);
+    display: flex;
+    width: 100%;
+}
+
+.yellow-container{
+    padding-bottom: 50px;
+    background-color: #fff568;
+    color: #232323;
+    -webkit-transform: skewY(-20deg);
+    transform: skewY(-20deg);
+}
+
+.red-container{
+    padding-bottom: 50px;
+    background-color: #f26d7d;
+    color: #232323;
+    -webkit-transform: skewY(-20deg);
+    transform: skewY(-20deg);
+}
+
+.un-skew{
+    -webkit-transform: skewY(20deg);
+    transform: skewY(20deg);
+}
+
+.books{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 500px;
+    justify-content: center;
+}
+
+.book{
+    background-color: #232323;
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+    height: 300px;
+}
+
+.book a{
+    width: 200px;
+    max-width: 200px;
+}
+
+.book a:hover{
+    outline: 2px solid white;
+}
+
+.book a:active{
+    background-color: white;
+}
+
