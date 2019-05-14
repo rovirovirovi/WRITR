@@ -30,6 +30,11 @@ a:active{
     text-decoration: none;
 }
 
+.center{
+    display: flex;
+    justify-content: center;
+}
+
 .container{
     text-align: center;
     padding: 2em 1.2em;
@@ -70,15 +75,21 @@ a:active{
 }
 
 .join{
+    /* margin: auto; */
     /* background-color: green; */
-    margin: auto;
-    /* background-color: green; */
+    display: flex;
     max-width: 375px;
-    padding: 10px 0px;
-    border: 1px solid white;
 }
 
-a:hover .join {
+.join a{
+    border: 1px solid white;
+    /* background-color: green; */
+    margin-top: 20px;
+    padding: 10px 50px;
+
+}
+
+.join a:hover  {
     background-color: white;
     color: #232323;
 }
@@ -109,6 +120,8 @@ a:hover .join {
     color: #232323;
     -webkit-transform: skewY(-20deg);
     transform: skewY(-20deg);
+    display: flex;
+    justify-content: center;
 }
 
 .red-container{
@@ -117,6 +130,8 @@ a:hover .join {
     color: #232323;
     -webkit-transform: skewY(-20deg);
     transform: skewY(-20deg);
+    display: flex;
+    justify-content: center;
 }
 
 .un-skew{
