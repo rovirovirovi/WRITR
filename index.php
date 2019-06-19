@@ -1,3 +1,13 @@
+<?php
+    require_once 'config.php';
+
+    session_start();
+
+    if(isset($_POST['account'])){
+
+    }
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -10,14 +20,17 @@
         <header>
             <div class="gray-container">
                 <div class="container">
-                    <img src="images/logo.png" alt="WRITR" class="logo">
+                <a href="index.php" alt = "home"><img src="images/logo.png" alt="WRITR" class="logo"></a>
 
                     <nav>
-                        <ul class="nav">
-                            <li><a href="#">WRITE</a></li>
-                            <li><a href="#">READ</a></li>
-                            <li><a href="#">USER</a></li>
-                        </ul>
+                        <form method="POST">
+                            <ul class="nav">
+                                <li><a href="#">WRITE</a></li>
+                                <li><a href="#">READ</a></li>
+                                <li><a href="profile.php">PROFILE</a></li>
+                            </ul>
+                        </form>
+                        
                     </nav>
                     
                     
@@ -25,15 +38,19 @@
 
                     <div class="center">
                         <div class="join">
-                            <a href="#">
+                            <a href="register.php">
                                 <h3>JOIN THE COMMUNITY</h3>
                             </a>
                         </div>
                     </div>
+                    <br>
+                    <div class="login">
+                    or <a href="login.php">LOG IN</a> if you're already part of it!
+                    </div> 
                 </div>
             </div>
         </header>
-        
+
         <div class="blue-container">
             <div class="container un-skew">
                 <h1>POPULAR</h1>
