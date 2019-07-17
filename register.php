@@ -22,7 +22,7 @@
                     $err = "Username already exists!";
                 }
             }
-
+            mysqli_stmt_close($stmt);
         }
     }
 
@@ -72,7 +72,7 @@
                         <ul class="nav">
                             <li><a href="#">WRITE</a></li>
                             <li><a href="#">READ</a></li>
-                            <li><a href="#">USER</a></li>
+                            <li><a href="#">PROFILE</a></li>
                         </ul>
                     </nav>
                 </div>

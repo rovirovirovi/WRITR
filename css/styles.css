@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Quicksand');
 
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     background-color: #232323;
     color: white;
@@ -119,6 +123,7 @@ a:active{
     transform: skewY(-20deg);
     display: flex;
     justify-content: center;
+    box-shadow: 5px 5px 18px black;
 }
 
 
@@ -130,6 +135,7 @@ a:active{
     transform: skewY(-20deg);
     display: flex;
     justify-content: center;
+    box-shadow: 5px 5px 18px #232323;
 }
 
 .red-container{
@@ -140,6 +146,7 @@ a:active{
     transform: skewY(-20deg);
     display: flex;
     justify-content: center;
+    box-shadow: 5px 5px 18px #232323;
 }
 
 .un-skew{
@@ -197,6 +204,32 @@ a:active{
         max-width: 1000px;
         justify-content: center;
     }
+
+    #editProfileDesc{
+        display: none;
+        background-color: white;
+        position: fixed;
+        max-width: 700px;
+        min-height: 50px;
+        width: 70%;
+        height: 50%;
+        
+        margin-left: auto;
+        margin-right: auto;
+        top: 30%;
+        left: 0;
+        right: 0;
+    
+        box-shadow: 5px 10px 18px black;
+        text-align: center;
+    
+        animation-name: animDropFromTop;
+        animation-duration: 0.4s;
+    }
+
+    .profileTitle h3{
+        display: inline;
+    }
 }
 
 .book{
@@ -205,6 +238,7 @@ a:active{
     justify-content: center;
     margin: 5px;
     height: 300px;
+    box-shadow: 5px 5px 18px #232323;
 }
 
 .book a{
@@ -230,6 +264,7 @@ a:active{
     padding-top: 30px;
     padding-bottom: 30px;
     justify-content: center;
+    box-shadow: 5px 10px 18px black;
 }
 
 .register input[type=text], input[type=password]{
@@ -237,6 +272,7 @@ a:active{
     height: 2em;
     font-size: 1.2em;
     margin-top: 5px;
+    border: 2px solid #AAAAAA;
     /* border: 2px solid #232323; */
 }
 
@@ -265,4 +301,256 @@ select:focus,
 textarea:focus,
 button:focus {
     outline: none;
+}
+
+.profile img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid white;
+}
+.profile h4{
+    max-width: 70%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    color: #232323;
+    box-shadow: 5px 10px 18px black;
+    padding: 2em 1.2em;
+    
+}
+
+.profile button{
+    border: 1px solid white;
+    padding: 8px 12px;
+    background-color: #232323;
+    color: white;
+}
+
+.profile button:hover{
+    background-color: white;
+    color: #232323;
+    cursor: pointer;
+}
+
+.profileBooks{
+    
+}
+
+.profileTitle{
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    /* padding-top: 20px; */
+    padding-bottom: 40px;
+    /* background-color: aqua; */
+    text-align: center;
+    display: block;
+}
+
+.profileTitle a{
+    /* background-color: #f26d7d; */
+    padding: 5px;
+    display: inline;
+    border-bottom: 1px solid white;
+}
+
+.profileTitle a:hover{
+    background-color: white;
+    color: #232323;
+}
+
+.profileTitle input[type=submit]{
+    padding: 5px;
+    display: inline;
+    border-bottom: 1px solid white;
+    outline: none;
+    background-color: #232323;
+}
+
+.profileBook{
+    /* padding-bottom:  */
+    padding: 2em 1.2em;
+    margin-bottom: 20px;
+    color: #232323;
+    max-width: 700px;
+    height: 140px;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 5px 10px 18px black;
+    clear: right;
+}
+
+.profileBook img{
+    height: 150px;
+    object-fit: cover;
+    float: right;
+    margin-top: -10px;
+    /* border: 1px solid #232323; */
+    outline: none;
+}
+
+.profileBook a{
+    color: #232323;
+}
+
+.profileBook a:hover{
+    border-bottom: 1px solid #232323;
+}
+
+.profileCategory{
+    display: inline;
+}
+
+.recent{
+    background-color: #6dcff6;
+}
+
+.recommended{
+    background-color: #fff568;
+}
+
+.clearfix{
+    overflow: auto;
+}
+
+.tag a{
+    border: 1px solid #232323;
+    border-radius: 15px;
+    margin-right: 0px;
+    margin-left: 2px;
+    margin-right: 2px;
+    padding: 4px;
+    float: left;
+    color: #232323;
+}
+
+.tag a:hover{
+    background-color: #232323;
+    color: white;
+}
+
+#btnScrollUp{
+    display: none;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    outline: none;
+    border: 1px solid white;
+    background-color: #232323;
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    z-index: 99;
+    color: white;
+    font-size: 1.1em;
+
+    animation-name: animShowFromBottom;
+    animation-duration: 0.4s;
+}
+
+@keyframes animShowFromBottom{
+    from{
+        bottom: -30px;
+        opacity: 0;
+    }
+    to{
+        bottom: 30px;
+        opacity: 1;
+    }
+}
+
+#btnScrollUp:hover{
+    background-color: white;
+    cursor: pointer;
+}
+
+#editProfileDesc{
+    display: none;
+    background-color: white;
+    position: fixed;
+    max-width: 700px;
+    min-height: 390px;
+    /* left: 20px; */
+    max-height: 500px;
+    height: auto;
+    
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    top: 20%;
+    left: 20px;
+    right: 20px;
+
+    box-shadow: 5px 10px 18px black;
+    text-align: center;
+
+    animation-name: animDropFromTop;
+    animation-duration: 0.4s;
+}
+
+@keyframes animDropFromTop{
+    from{
+        top: -300px;
+        opacity: 0;
+    }
+    to{
+        top: 20%;
+        opacity: 1;
+    }
+}
+
+#editProfileDesc textarea{
+    min-width: 97%;
+    height: 80%;
+    min-height: 300px;
+    font-size: 1.2em;
+    margin: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid white;
+    resize: none;
+}
+
+#editProfileDesc textarea:focus{
+    /* border: 2px solid #232323; */
+}
+
+#editProfileDesc input[type=submit]{
+    background-color: white;
+    color: #232323;
+    border: 1px solid #232323;
+    padding: 10px 30px;
+    cursor: pointer;
+    font-size: 1.1em;
+    border-radius: 50px;
+    box-shadow: 5px 5px 10px #aaaaaa;
+}
+
+#editProfileDesc input[type=submit]:hover{
+    background-color: #232323;
+    border: 1px solid white;
+    color: white;
+}
+
+#editProfileDesc a{
+    /* background-color: white; */
+    color: #232323;
+    cursor: pointer;
+    /* border: 1px solid #232323; */
+    /* padding: 8px 10px; */
+    /* cursor: pointer; */
+    /* border-radius: 50%; */
+    /* box-shadow: 5px 5px 10px #aaaaaa; */
+}
+
+#recents{
+    display: none;
+}
+
+#recommends{
+    display: none;
 }

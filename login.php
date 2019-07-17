@@ -7,7 +7,7 @@
     $err = "";
 
     if(isset($_POST['logUsername']) && !empty($_POST['logUsername']) && isset($_POST['logPass']) && !empty($_POST['logPass'])){
-        $sql = "SELECT name, password, email, id FROM users WHERE name = ?";
+        $sql = "SELECT name, password, email, id, description FROM users WHERE name = ?";
         
         if($stmt = mysqli_prepare($db, $sql)){
             $username = mysqli_real_escape_string($db, trim($_POST['logUsername']));
@@ -19,14 +19,15 @@
                 mysqli_stmt_store_result($stmt);
 
                 if(mysqli_stmt_num_rows($stmt) == 1){ // found the a matching username
-                    mysqli_stmt_bind_result($stmt, $username, $hashedPass, $email, $id);
+                    mysqli_stmt_bind_result($stmt, $username, $hashedPass, $email, $id, $userDesc);
                     if(mysqli_stmt_fetch($stmt)){
                         if(password_verify($password, $hashedPass)){
                             //log in ok
                             session_start();
                             $_SESSION['username'] = $username;
                             $_SESSION['userId'] = $id;
-                            header("location: index.php");
+                            $_SESSION['userDesc'] = $userDesc;
+                            header("location: profile.php");
                             exit();
                         }
                         else{
@@ -64,7 +65,7 @@
                         <ul class="nav">
                             <li><a href="#">WRITE</a></li>
                             <li><a href="#">READ</a></li>
-                            <li><a href="#">USER</a></li>
+                            <li><a href="#">PROFILE</a></li>
                         </ul>
                     </nav>
                 </div>
